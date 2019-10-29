@@ -1,0 +1,23 @@
+<h2>Command Lines</h2>
+
+
+
+<div *ngFor="let command of apicommands; index as commandId">
+<!--ngFor displays the property for objects in a list.-->
+
+
+  <h3>
+    <a [title]="command.name" [routerLink]="['/results', commandId]">
+      {{ command.name }}
+    </a>
+  </h3>
+  <!--*ngIf displays the property if its present else leaves it empty.-->
+  <p *ngIf="command.description">
+    Description: {{ command.description }}
+  </p>
+  <!-- button function located in the CommandListComponent.ts file-->
+  <button (click)="randomButton()">
+    Do random thing
+  </button>
+
+</div>
