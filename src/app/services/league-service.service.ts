@@ -1,23 +1,19 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
+import { League } from "../models/league";
 import { Sport } from "../models/sport";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 
-export class SportService {
+export class LeagueServiceService {
+
   constructor(private http: HttpClient) {
   }
 
-  getSports() {
-    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/sport/all';
-    return this.http.get(apiUrl);
-  }
-
-  addSport(sport: Sport): void {
-
-    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/sport/add?';
+  getLeaguesBySport(sport: Sport): void {
+    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/league/sport/';
 
     const body = new HttpParams()
       .set("name", sport.name);
