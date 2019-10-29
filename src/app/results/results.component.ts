@@ -2,7 +2,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from "@angular/cor
 import { HttpClient} from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { apicommands } from '../apicommands';
-import { sport } from "../models/sport";
+import { Sport } from "../models/sport";
 import { getAllSports } from "../services/getAllSports"
 
 @Component({
@@ -11,13 +11,13 @@ import { getAllSports } from "../services/getAllSports"
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  sport: sport = {
+  sport: Sport = {
     id: 0,
     name: "",
 //    leagues: []
   };
 
-  data: any = {};
+  data: any = [];
 
   //sportArr : sport[] = [];
 

@@ -1,23 +1,20 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
+import { sport } from "../models/sport";
 import { map } from 'rxjs/operators';
-
-
-
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class getAllSports {
+export class GetSportId {
 
-private apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/sport/all'
+private apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/sport/'
 
   constructor(private http: HttpClient) {
   }
 
-  getSports() {
-    //insert correct adress here.
+  getSportId() {
     return this.http.get(this.apiUrl);
   }
 }
