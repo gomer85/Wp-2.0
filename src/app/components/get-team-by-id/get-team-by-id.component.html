@@ -1,0 +1,12 @@
+<div class="container">
+    <h1 class="text-left">Get team by ID</h1>
+    <form [formGroup]="getTeamByIdForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="id">Team ID</label>
+            <input type="text" formControlName="id" class="form-control" id="id" required>
+        </div>
+        <button type="reset" class="btn btn-warning btn-block">Reset</button>
+        <button type="submit" class="btn btn-success btn-block" (click)="changeLabel(result.id)">Submit</button>
+        <label #result id="result"></label>
+    </form>
+</div>

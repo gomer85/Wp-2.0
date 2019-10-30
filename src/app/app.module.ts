@@ -14,6 +14,7 @@ import { GetLeagueByIdComponent } from './components/get-league-by-id/get-league
 import { GetAllSportsComponent } from './components/get-all-sports/get-all-sports.component';
 import {AddNewArenaComponent} from './components/add-new-arena/add-new-arena.component';
 import { AddLeagueBysportidComponent } from './components/add-league-bysportid/add-league-bysportid.component';
+import { GetTeamByIdComponent } from './components/get-team-by-id/get-team-by-id.component';
 
 
 
@@ -28,6 +29,7 @@ import { AddLeagueBysportidComponent } from './components/add-league-bysportid/a
       { path: 'AddSport/:command.name', component: AddSportComponent },
       { path: 'GetLeagueById/:command.name', component: GetLeagueByIdComponent },
       { path: 'GetLeagueBySport/:command.name', component: GetLeagueBySportComponent },
+      { path: 'GetTeamById/:command.name', component: GetTeamByIdComponent },
     ])
   ],
   declarations: [
@@ -42,6 +44,7 @@ import { AddLeagueBysportidComponent } from './components/add-league-bysportid/a
     GetAllSportsComponent,
     AddNewArenaComponent,
     AddLeagueBysportidComponent,
+    GetTeamByIdComponent,
   ],
   bootstrap: [ AppComponent ]
 })
