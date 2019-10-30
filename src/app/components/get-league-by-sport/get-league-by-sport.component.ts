@@ -14,7 +14,7 @@ export class GetLeagueBySportComponent implements OnInit {
       sportId: new FormControl(''),
     });
 
-        data: string[] = [];
+        data: string[];
         labelId: string
 
         constructor(private leagueService: LeagueService) {}
@@ -27,14 +27,15 @@ export class GetLeagueBySportComponent implements OnInit {
         }
 
         makeReadable(data) {
-          console.log(data.size);
+          var string = new String();
+          for (let i = 0; i < data.length; i++) {
+            string = string + "ID = " + data[i].id;
+            string = string + " ID = " + data[i].id;
+            string = string + " name = " + data[i].name;
+            string = string + " sport ID = " + data[i].sportId + "<br>";
+          }
 
-          var id = data.id;
-          var name = data.name;
-          var sportId = data.sportId;
-
-          var array = ["ID = " + id, "name = " + name, "sport ID = " + sportId];
-          return array
+          return string
         }
         onSubmit(): void {
           var sportId = this.getLeaguesBySportForm.controls.sportId.value;
