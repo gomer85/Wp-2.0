@@ -1,0 +1,16 @@
+.e-icons {
+  font-family: "e-icons";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
