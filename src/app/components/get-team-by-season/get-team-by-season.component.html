@@ -1,0 +1,12 @@
+<div class="container">
+    <h1 class="text-left">Get Team by Season ID</h1>
+    <form [formGroup]="getTeamsBySeasonForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="seasonId">Season ID</label>
+            <input type="text" class="form-control" formControlName="seasonId" id="seasonId" required>
+        </div>
+        <button type="reset" class="btn btn-warning">Reset</button>
+        <button type="submit" class="btn btn-success" (click)="changeLabel(result.id)">Submit</button>
+        <label #result id="result"></label>
+    </form>
+</div>

@@ -42,7 +42,6 @@ export class GetLeagueBySportComponent implements OnInit {
 
     this.leagueService.getLeaguesBySport(sportId).subscribe(data => {
       console.log(data);
-      //  this.data = data;
       var newData = this.makeReadable(data);
       document.getElementById(this.labelId).innerHTML = newData;
     });

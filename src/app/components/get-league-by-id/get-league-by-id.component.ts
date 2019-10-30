@@ -39,7 +39,6 @@ export class GetLeagueByIdComponent implements OnInit {
 
       this.leagueService.getLeagueById(id).subscribe(data => {
           console.log(data);
-          this.data = data;
           var newData = this.makeReadable(data);
           document.getElementById(this.labelId).innerHTML = newData;
         });

@@ -16,6 +16,8 @@ import { AddLeagueBysportidComponent } from './components/add-league-bysportid/a
 import { GetTeamByIdComponent } from './components/get-team-by-id/get-team-by-id.component';
 import { AddTeamComponent } from './components/add-team/add-team.component';
 import { GetTeamBySportComponent } from './components/get-team-by-sport/get-team-by-sport.component';
+import { GetTeamBySeasonComponent } from './components/get-team-by-season/get-team-by-season.component';
+import { AddLeagueComponent } from './components/add-league/add-league.component';
 
 
 
@@ -30,8 +32,10 @@ import { GetTeamBySportComponent } from './components/get-team-by-sport/get-team
       { path: 'AddSport/:command.name', component: AddSportComponent },
       { path: 'GetLeagueById/:command.name', component: GetLeagueByIdComponent },
       { path: 'GetLeagueBySport/:command.name', component: GetLeagueBySportComponent },
+      { path: 'AddLeague/:command.name', component: AddLeagueComponent },
       { path: 'GetTeamById/:command.name', component: GetTeamByIdComponent },
       { path: 'GetTeamBySport/:command.name', component: GetTeamBySportComponent },
+      { path: 'GetTeamBySeason/:command.name', component: GetTeamBySeasonComponent },
       { path: 'AddTeam/:command.name', component: AddTeamComponent },
     ])
   ],
@@ -49,6 +53,8 @@ import { GetTeamBySportComponent } from './components/get-team-by-sport/get-team
     GetTeamByIdComponent,
     AddTeamComponent,
     GetTeamBySportComponent,
+    GetTeamBySeasonComponent,
+    AddLeagueComponent,
   ],
   bootstrap: [ AppComponent ]
 })
