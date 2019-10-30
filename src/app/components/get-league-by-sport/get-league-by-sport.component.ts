@@ -14,15 +14,38 @@ export class GetLeagueBySportComponent implements OnInit {
       sportId: new FormControl(''),
     });
 
-    constructor(private leagueService: LeagueService) {}
+        data: string[] = [];
+        labelId: string
 
-    ngOnInit() {
-    }
-/*
-    onSubmit(): void {
-      let sportId2 = this.getLeaguesBySportForm.controls.sportId.value;
-      console.log(sportId2);
-      this.leagueService.getLeaguesBySport(sportId2);
-      this.getLeaguesBySportForm.reset();
-    } */
-  }
+        constructor(private leagueService: LeagueService) {}
+
+        ngOnInit() {
+        }
+
+        changeLabel(labelId) {
+          this.labelId = labelId;
+        }
+
+        makeReadable(data) {
+          console.log(data.size);
+
+          var id = data.id;
+          var name = data.name;
+          var sportId = data.sportId;
+
+          var array = ["ID = " + id, "name = " + name, "sport ID = " + sportId];
+          return array
+        }
+        onSubmit(): void {
+          var sportId = this.getLeaguesBySportForm.controls.sportId.value;
+
+          this.leagueService.getLeaguesBySport(sportId).subscribe(data => {
+              console.log(data);
+              this.data = data;
+              var newData = this.makeReadable(data);
+              document.getElementById(this.labelId).innerHTML = newData;
+            });
+        }
+
+
+      }

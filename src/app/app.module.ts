@@ -21,7 +21,7 @@ import { GetLeagueByIdComponent } from './components/get-league-by-id/get-league
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: CommandListComponent },
-      { path: 'results/:command.name', component: GetLeagueByIdComponent },
+      { path: 'results/:command.name', component: GetLeagueBySportComponent },
     ])
   ],
   declarations: [
