@@ -1,0 +1,12 @@
+<div>
+  <h1>Add arena</h1>
+  <form [formGroup]="addArenaForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">
+        Arena name
+      </label>
+      <input id="name" type="text" formControlName="name" class="form-control">
+      <button type="submit">
+        Add arena
+      </button>
+    </div>

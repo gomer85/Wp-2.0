@@ -11,6 +11,10 @@ import { ResultsComponent } from './results/results.component';
 import { AddSportComponent } from './components/add-sport/add-sport.component';
 import { GetLeagueBySportComponent } from './components/get-league-by-sport/get-league-by-sport.component';
 import { GetLeagueByIdComponent } from './components/get-league-by-id/get-league-by-id.component';
+import { GetAllSportsComponent } from './components/get-all-sports/get-all-sports.component';
+import {AddNewArenaComponent} from './components/add-new-arena/add-new-arena.component';
+import { AddLeagueBysportidComponent } from './components/add-league-bysportid/add-league-bysportid.component';
+
 
 
 @NgModule({
@@ -21,11 +25,11 @@ import { GetLeagueByIdComponent } from './components/get-league-by-id/get-league
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: CommandListComponent },
-      { path: 'results/:command.name', component: GetLeagueBySportComponent },
+     { path: 'add-league-bysportid/:command.name', component: AddLeagueBysportidComponent },
     ])
   ],
   declarations: [
-    ResultsComponent,
+
     AppComponent,
     TopBarComponent,
     CommandListComponent,
@@ -33,6 +37,9 @@ import { GetLeagueByIdComponent } from './components/get-league-by-id/get-league
     AddSportComponent,
     GetLeagueBySportComponent,
     GetLeagueByIdComponent,
+    GetAllSportsComponent,
+    AddNewArenaComponent,
+    AddLeagueBysportidComponent,
   ],
   bootstrap: [ AppComponent ]
 })
