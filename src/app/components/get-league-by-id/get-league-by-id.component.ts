@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { LeagueService } from '../../services/leagueService';
+import { LeagueService } from '../../services/LeagueService';
 import { League } from '../../models/league';
 
 @Component({
