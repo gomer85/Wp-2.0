@@ -15,7 +15,8 @@ export class GetLeagueByIdComponent implements OnInit {
     });
 
     data: any = [];
-    labelId: string
+    labelId: string;
+
     constructor(private leagueService: LeagueService) {}
 
     ngOnInit() {

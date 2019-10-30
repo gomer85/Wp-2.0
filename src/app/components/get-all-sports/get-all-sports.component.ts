@@ -2,8 +2,8 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from "@angular/cor
 import { HttpClient} from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { apicommands } from '../../apicommands';
-import { sport } from "../../models/sport";
-import { getAllSports } from "../../services/getAllSports"
+import { Sport } from "../../models/sport";
+import { GetAllSports } from "../../services/getAllSports"
 
 @Component({
   selector: 'app-get-all-sports',
@@ -11,7 +11,7 @@ import { getAllSports } from "../../services/getAllSports"
   styleUrls: ['./get-all-sports.component.css']
 })
 export class GetAllSportsComponent implements OnInit {
-  sport: sport = {
+  sport: Sport = {
     id: 0,
     name: "",
 //    leagues: []
@@ -21,7 +21,7 @@ export class GetAllSportsComponent implements OnInit {
 
   //sportArr : sport[] = [];
 
-  constructor(private route: ActivatedRoute, private getAllSports: getAllSports) {}
+  constructor(private route: ActivatedRoute, private getAllSports: GetAllSports) {}
 
   ngOnInit() {
       this.getAllSports.getSports().subscribe(data => {
