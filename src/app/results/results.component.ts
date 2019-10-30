@@ -3,7 +3,7 @@ import { HttpClient} from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { apicommands } from '../apicommands';
 import { Sport } from "../models/sport";
-import { getAllSports } from "../services/getAllSports";
+import { GetAllSports } from "../services/getAllSports";
 import { SportService } from "../services/SportService";
 import { LeagueService } from "../services/LeagueService";
 
