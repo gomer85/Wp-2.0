@@ -1,5 +1,5 @@
 export class League {
-    id: number;
-    name: string;
-    sportId: number;
+  id: number;
+  name: string;
+  sportId: number;
 }
