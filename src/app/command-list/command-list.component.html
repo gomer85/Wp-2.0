@@ -1,23 +1,22 @@
-<h2>Command Lines</h2>
+<!--
+  <h2>Services</h2>
 
 
+<h2>
+  <a class="e-icons" [routerLink]="['/get-all-sports', 1]">
+    Get all sports
+  </a>
+</2>
 
-<div *ngFor="let command of apicommands; index as commandId">
-<!--ngFor displays the property for objects in a list.-->
+<h3>
+  <a class="e-icons" [routerLink]="['/add-league-bysportid', 2]">
+    Add league by sport id
+  </a>
+</h3>
 
-
-  <h3>
-    <a [title]="command.name" [routerLink]="['/results', commandId]">
-      {{ command.name }}
-    </a>
-  </h3>
-  <!--*ngIf displays the property if its present else leaves it empty.-->
-  <p *ngIf="command.description">
-    Description: {{ command.description }}
-  </p>
-  <!-- button function located in the CommandListComponent.ts file-->
-  <button (click)="randomButton()">
-    Do random thing
-  </button>
-
-</div>
+<h4>
+  <a class="e-icons" [routerLink]="['/add-new-arena', 2]">
+    Add new arena
+  </a>
+</h4>
+-->

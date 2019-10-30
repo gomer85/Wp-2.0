@@ -1,5 +1,6 @@
 export const apicommands = [
   {
+    id: 0,
     name: 'Get All Sports',
     description: 'Gets a list of all available sports'
   },
