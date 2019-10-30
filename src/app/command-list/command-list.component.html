@@ -1,47 +1,40 @@
-<h2>Services</h2>
 
-<div *ngFor="let command of apicommands; index as commandId">
-<!--ngFor displays the property for objects in a list.-->
-
-
-  <h3>
-    <a [title]="command.name" [routerLink]="['/results', commandId]">
-      {{ command.name }}
-    </a>
-  </h3>
-  <!--*ngIf displays the property if its present else leaves it empty.-->
-  <p *ngIf="command.description">
-    Description: {{ command.description }}
-  </p>
-  <!-- button function located in the CommandListComponent.ts file-->
-  <button (click)="randomButton()">
-    Do random thing
-  </button>
-
-</div>
-
-<!--
-  <h5>
-    <a class="e-icons" [routerLink]="['/results', 1]">
-    Get All Sports
-    </a>
-  </h5>
-
-<h2>
-  <a class="e-icons" [routerLink]="['/get-all-sports', 1]">
-    Get all sports
-  </a>
-</2>
-
-<h3>
-  <a class="e-icons" [routerLink]="['/add-league-bysportid', 2]">
-    Add league by sport id
-  </a>
-</h3>
-
-<h4>
-  <a class="e-icons" [routerLink]="['/add-new-arena', 2]">
-    Add new arena
-  </a>
-</h4>
--->
+<body>
+  <main class="main-content">
+    <h2>Command Lines</h2>
+    <ul class= "command-list">
+      <li>
+      <h5>
+        <a class="e-icons" [routerLink]="['/GetAllSports', 1]">
+        Get All Sports
+        </a>
+        <p>Description: Gets a list of all available sports</p>
+      </h5>
+      </li>
+      <li>
+      <h5>
+        <a class="e-icons" [routerLink]="['/AddSport', 1]">
+        Add a Sport
+        </a>
+        <p>Description: Adds a sport</p>
+      </h5>
+      </li>
+      <li>
+      <h6>
+        <a class="e-icons" [routerLink]="['/GetLeagueById', 2]">
+        Get League By Id
+        </a>
+        <p>Description: Gets a list of all available sports</p>
+      </h6>
+      </li>
+      <li>
+        <h6>
+          <a class="e-icons" [routerLink]="['/GetLeagueBySport', 3]">
+          Get League By Sport ID
+          </a>
+          <p>Description: Gets a the leagues by sport ID</p>
+        </h6>
+      </li>
+    </ul>
+  </main>
+</body>
