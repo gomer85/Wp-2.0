@@ -30,7 +30,7 @@ export class TeamService {
 
     let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/team/add/';
 
-    this.http.post(apiUrl + team.sportId + "/" + team.name);
+    this.http.post(apiUrl + team.sportId + "/" + team.name, JSON.stringify(team));
   }
 
 }
