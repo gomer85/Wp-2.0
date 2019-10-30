@@ -10,6 +10,8 @@ import { CommandListComponent } from './command-list/command-list.component';
 import { GetAllSportsComponent } from './components/get-all-sports/get-all-sports.component';
 import {AddNewArenaComponent} from './components/add-new-arena/add-new-arena.component';
 import { AddLeagueBysportidComponent } from './components/add-league-bysportid/add-league-bysportid.component';
+import { GetLeagueBysportidComponent } from './components/get-league-bysportid/get-league-bysportid.component';
+import { AddSportComponent } from './components/add-sport/add-sport.component';
 
 
 
@@ -22,7 +24,10 @@ import { AddLeagueBysportidComponent } from './components/add-league-bysportid/a
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: CommandListComponent },
-     { path: 'add-league-bysportid/:command.name', component: AddLeagueBysportidComponent },
+      { path: 'add-league-bysportid', component: AddLeagueBysportidComponent },
+      { path: 'get-league-bysportid', component: GetLeagueBysportidComponent },
+      { path: 'add-sport', component: AddSportComponent },
+
     ])
   ],
   declarations: [
@@ -33,6 +38,8 @@ import { AddLeagueBysportidComponent } from './components/add-league-bysportid/a
     GetAllSportsComponent,
     AddNewArenaComponent,
     AddLeagueBysportidComponent,
+    GetLeagueBysportidComponent,
+    AddSportComponent,
   ],
   bootstrap: [ AppComponent ]
 })

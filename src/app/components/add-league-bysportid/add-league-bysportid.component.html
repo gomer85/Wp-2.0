@@ -1,11 +1,13 @@
-<p>add-league-bysportid works!</p>
 
-<div>
-  <h1>Add a new league to a specific sport</h1>
-  <label for="id">Sport id</label>
-  <input type="text" id="id">
-  <label for="name">League name</label>
-  <input id="name" type="text">
-  <button type="submit" name="button"> Add the league</button>
-
+<div class="container">
+    <h1 class="text-left">Get League by Sport ID</h1>
+    <form [formGroup]="addLeagueBySportIdForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="id">Name</label>
+            <input type="text" class="form-control" formControlName="name" id="name" required>
+            <label for="sportId">Sport ID</label>
+            <input type="text" class="form-control" formControlName="sportId" id="sportId" required>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+    </form>
 </div>

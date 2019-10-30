@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
 import { Injectable } from '@angular/core';
-import { sport } from "../models/sport";
+import { Sport } from "../models/Sport";
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -18,4 +18,17 @@ private apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/sport/all'
     //insert correct adress here.
     return this.http.get(this.apiUrl);
   }
+
+  addSport(sport: Sport): void {
+
+      let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/sport/add?';
+
+      const body = new HttpParams()
+        .set("name", sport.name);
+
+      let options = {
+        headers: new HttpHeaders()
+          .set('Content-Type', 'application/x-www-form-urlencoded')
+      };
+}
 }
