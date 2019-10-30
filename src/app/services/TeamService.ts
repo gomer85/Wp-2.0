@@ -33,7 +33,7 @@ export class TeamService {
       headers: new HttpHeaders()
         .set('Content-Type', 'application/x-www-form-urlencoded')
     };
-    console.log(apiUrl + body + " @@@@@");
+
     this.http.post(apiUrl, body.toString(), options)
       .subscribe(
         res => { console.log("POST Request was successful: " + res) },
