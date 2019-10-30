@@ -25,7 +25,7 @@ import { AddLeagueBysportidComponent } from './components/add-league-bysportid/a
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: CommandListComponent },
-     { path: 'add-league-bysportid/:command.name', component: AddLeagueBysportidComponent },
+     { path: 'results/:command.name', component: GetLeagueByIdComponent },
     ])
   ],
   declarations: [

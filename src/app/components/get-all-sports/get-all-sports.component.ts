@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from "@angular/core";
 import { HttpClient} from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
-import { apicommands } from '../../apicommands';
 import { Sport } from "../../models/sport";
 import { GetAllSports } from "../../services/getAllSports"
 
