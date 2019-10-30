@@ -2,8 +2,11 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from "@angular/cor
 import { HttpClient} from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { apicommands } from '../apicommands';
-import { sport } from "../models/sport";
-import { getAllSports } from "../services/getAllSports"
+import { Sport } from "../models/sport";
+import { getAllSports } from "../services/getAllSports";
+import { SportService } from "../services/SportService";
+import { LeagueService } from "../services/LeagueService";
+
 
 @Component({
   selector: 'app-results',
@@ -11,22 +14,24 @@ import { getAllSports } from "../services/getAllSports"
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  sport: sport = {
+  sport: Sport = {
     id: 0,
     name: "",
 //    leagues: []
   };
 
-  data: any = {};
+  data: any = [];
 
   //sportArr : sport[] = [];
 
-  constructor(private route: ActivatedRoute, private getAllSports: getAllSports) {}
+  constructor(private route: ActivatedRoute, private service: LeagueService) {}
 
   ngOnInit() {
-      this.getAllSports.getSports().subscribe(data => {
+    this.service.getLeagueById();
+
+    /*   this.getAllSports.getSports().subscribe(data => {
         console.log(data);
         this.data = data;
-      })
+      }) */
   }
 }

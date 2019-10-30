@@ -1,5 +1,6 @@
 export const apicommands = [
   {
+    id: 0,
     name: 'Get All Sports',
     description: 'Gets a list of all available sports'
   },
@@ -10,5 +11,9 @@ export const apicommands = [
   {
     name: 'Remove Sport By Id',
     description: 'Removes A Sport By Id'
+  },
+  {
+    nane: 'Add Sport',
+    description: 'Add a sport'
   }
 ];

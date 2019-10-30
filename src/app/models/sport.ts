@@ -1,4 +1,4 @@
-export class sport {
+export class Sport {
     id: number;
     name: string;
 }
