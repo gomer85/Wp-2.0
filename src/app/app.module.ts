@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CommandListComponent } from './command-list/command-list.component';
-import { ResultsComponent } from './results/results.component';
 import { AddSportComponent } from './components/add-sport/add-sport.component';
 import { GetLeagueBySportComponent } from './components/get-league-by-sport/get-league-by-sport.component';
 import { GetLeagueByIdComponent } from './components/get-league-by-id/get-league-by-id.component';
@@ -15,6 +14,8 @@ import { GetAllSportsComponent } from './components/get-all-sports/get-all-sport
 import {AddNewArenaComponent} from './components/add-new-arena/add-new-arena.component';
 import { AddLeagueBysportidComponent } from './components/add-league-bysportid/add-league-bysportid.component';
 import { GetTeamByIdComponent } from './components/get-team-by-id/get-team-by-id.component';
+import { AddTeamComponent } from './components/add-team/add-team.component';
+import { GetTeamBySportComponent } from './components/get-team-by-sport/get-team-by-sport.component';
 
 
 
@@ -30,6 +31,8 @@ import { GetTeamByIdComponent } from './components/get-team-by-id/get-team-by-id
       { path: 'GetLeagueById/:command.name', component: GetLeagueByIdComponent },
       { path: 'GetLeagueBySport/:command.name', component: GetLeagueBySportComponent },
       { path: 'GetTeamById/:command.name', component: GetTeamByIdComponent },
+      { path: 'GetTeamBySport/:command.name', component: GetTeamBySportComponent },
+      { path: 'AddTeam/:command.name', component: AddTeamComponent },
     ])
   ],
   declarations: [
@@ -37,7 +40,6 @@ import { GetTeamByIdComponent } from './components/get-team-by-id/get-team-by-id
     AppComponent,
     TopBarComponent,
     CommandListComponent,
-    ResultsComponent,
     AddSportComponent,
     GetLeagueBySportComponent,
     GetLeagueByIdComponent,
@@ -45,6 +47,8 @@ import { GetTeamByIdComponent } from './components/get-team-by-id/get-team-by-id
     AddNewArenaComponent,
     AddLeagueBysportidComponent,
     GetTeamByIdComponent,
+    AddTeamComponent,
+    GetTeamBySportComponent,
   ],
   bootstrap: [ AppComponent ]
 })

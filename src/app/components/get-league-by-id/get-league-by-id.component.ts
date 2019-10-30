@@ -31,8 +31,8 @@ export class GetLeagueByIdComponent implements OnInit {
       var name = data.name;
       var sportId = data.sportId;
 
-      var string = "ID = " + id + " name = " + name +  " sport ID = " + sportId;
-      return string;
+      var text = "ID = " + id + " name = " + name +  " sport ID = " + sportId;
+      return text;
     }
     onSubmit(): void {
       var id = this.getLeagueByIdForm.controls.id.value;

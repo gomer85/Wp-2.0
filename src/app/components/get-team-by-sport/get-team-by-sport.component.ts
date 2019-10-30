@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { LeagueService } from '../../services/LeagueService';
-import { Sport } from '../../models/sport';
+import { TeamService } from '../../services/TeamService';
+import { Team } from '../../models/team';
 
 @Component({
-  selector: 'app-get-league-by-sport',
-  templateUrl: './get-league-by-sport.component.html',
-  styleUrls: ['./get-league-by-sport.component.css']
+  selector: 'app-get-team-by-sport',
+  templateUrl: './get-team-by-sport.component.html',
+  styleUrls: ['./get-team-by-sport.component.css']
 })
 
-export class GetLeagueBySportComponent implements OnInit {
+export class GetTeamBySportComponent implements OnInit {
 
-  getLeaguesBySportForm = new FormGroup({
+  getTeamsBySportForm = new FormGroup({
     sportId: new FormControl(''),
   });
 
   data: string[];
   labelId: string
 
-  constructor(private leagueService: LeagueService) { }
+  constructor(private teamService: TeamService) { }
 
   ngOnInit() {
   }
@@ -38,11 +38,10 @@ export class GetLeagueBySportComponent implements OnInit {
     return text
   }
   onSubmit(): void {
-    var sportId = this.getLeaguesBySportForm.controls.sportId.value;
+    var sportId = this.getTeamsBySportForm.controls.sportId.value;
 
-    this.leagueService.getLeaguesBySport(sportId).subscribe(data => {
+    this.teamService.getTeamsBySport(sportId).subscribe(data => {
       console.log(data);
-      //  this.data = data;
       var newData = this.makeReadable(data);
       document.getElementById(this.labelId).innerHTML = newData;
     });

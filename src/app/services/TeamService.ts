@@ -16,4 +16,28 @@ export class TeamService {
     return this.http.get(apiUrl + id);
   }
 
+  getTeamsBySport(id: number) {
+    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/team/sport/';
+    return this.http.get(apiUrl + id);
+  }
+
+  addTeam(team: Team): void {
+
+    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/team/add?';
+
+    const body = new HttpParams()
+      .set("id", team.sportId + "")
+      .set("name", team.name);
+
+    let options = {
+      headers: new HttpHeaders()
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+    };
+    console.log(apiUrl + body + " @@@@@");
+    this.http.post(apiUrl, body.toString(), options)
+      .subscribe(
+        res => { console.log("POST Request was successful: " + res) },
+        err => { console.log("Error occurred: " + err.toString) });
+  }
+
 }

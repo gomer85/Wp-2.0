@@ -1,9 +1,9 @@
 <div class="container">
-    <h1 class="text-left">Get league by ID</h1>
-    <form [formGroup]="getLeagueByIdForm" (ngSubmit)="onSubmit()">
+    <h1 class="text-left">Get Team by Sport ID</h1>
+    <form [formGroup]="getTeamsBySportForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="id">League ID</label>
-            <input type="text" formControlName="id" class="form-control" id="id" required>
+            <label for="sportId">Sport ID</label>
+            <input type="text" class="form-control" formControlName="sportId" id="sportId" required>
         </div>
         <button type="reset" class="btn btn-warning">Reset</button>
         <button type="submit" class="btn btn-success" (click)="changeLabel(result.id)">Submit</button>
