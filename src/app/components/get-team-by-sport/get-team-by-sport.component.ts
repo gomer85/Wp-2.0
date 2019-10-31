@@ -31,8 +31,7 @@ export class GetTeamBySportComponent implements OnInit {
     var text = "";
     for (let i = 0; i < data.length; i++) {
       text = text + "ID = " + data[i].id;
-      text = text + " name = " + data[i].name;
-      text = text + " sport ID = " + data[i].sportId + "<br>";
+      text = text + " name = " + data[i].name + "<br>";
     }
 
     return text

@@ -38,6 +38,7 @@ import { AddLeagueComponent } from './components/add-league/add-league.component
       { path: 'GetTeamBySport', component: GetTeamBySportComponent },
       { path: 'GetTeamBySeason', component: GetTeamBySeasonComponent },
       { path: 'AddTeam', component: AddTeamComponent },
+      { path: 'AddArena', component: AddNewArenaComponent },
     ])
   ],
   declarations: [
