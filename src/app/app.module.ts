@@ -29,14 +29,15 @@ import { AddLeagueComponent } from './components/add-league/add-league.component
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: CommandListComponent },
-      { path: 'AddSport/:command.name', component: AddSportComponent },
-      { path: 'GetLeagueById/:command.name', component: GetLeagueByIdComponent },
-      { path: 'GetLeagueBySport/:command.name', component: GetLeagueBySportComponent },
-      { path: 'AddLeague/:command.name', component: AddLeagueComponent },
-      { path: 'GetTeamById/:command.name', component: GetTeamByIdComponent },
-      { path: 'GetTeamBySport/:command.name', component: GetTeamBySportComponent },
-      { path: 'GetTeamBySeason/:command.name', component: GetTeamBySeasonComponent },
-      { path: 'AddTeam/:command.name', component: AddTeamComponent },
+      { path: 'GetAllSports', component: GetAllSportsComponent },
+      { path: 'AddSport', component: AddSportComponent },
+      { path: 'GetLeagueById', component: GetLeagueByIdComponent },
+      { path: 'GetLeagueBySport', component: GetLeagueBySportComponent },
+      { path: 'AddLeague', component: AddLeagueComponent },
+      { path: 'GetTeamById', component: GetTeamByIdComponent },
+      { path: 'GetTeamBySport', component: GetTeamBySportComponent },
+      { path: 'GetTeamBySeason', component: GetTeamBySeasonComponent },
+      { path: 'AddTeam', component: AddTeamComponent },
     ])
   ],
   declarations: [

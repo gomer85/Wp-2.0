@@ -22,11 +22,25 @@ export class LeagueService {
     return this.http.get(apiUrl + id);
   }
 
-  addLeague(league: League): Observable<League>{
+  addLeague(league: League): void {
 
-    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/league/add/';
+    let apiUrl = 'http://gruppmalin.jls-sto1.elastx.net/api/league/add?';
 
-    return this.http.post<League>(apiUrl + league.sportId + "/" + league.name, JSON.stringify(league));
+
+    const body = new HttpParams()
+      .set("id", league.sportId + "")
+      .set("name", league.name);
+
+    let options = {
+        headers: new HttpHeaders()
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+    };
+
+    this.http.post(apiUrl, body.toString(), options)
+      .subscribe(
+        res => { console.log("POST Request was successful: " + res) },
+        err => { console.log("Error occurred: " + err.toString) });
+  //  return this.http.post<League>(apiUrl + league.sportId + "/" + league.name, JSON.stringify(league));
   }
 
 }
